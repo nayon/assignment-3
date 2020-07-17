@@ -27,16 +27,31 @@ console.log(woodResult);
 
 // brickCalculator start
 
+function brickCalculator(floor)
+    if(floor <= 10){
+            brickPerFloor = 1000;
+            floorHight = 15;
+            var totalBricks = brickPerFloor * floorHight;
+            return totalBricks;
+        }
+    else if(floor > 10 && floor <=20){
+            brickPerFloor = 1000;
+            floorHight = 12;
+            var totalBricks = brickPerFloor * floorHight;
+            return totalBricks;
+        }
+    else(floor > 20){
+            brickPerFloor = 1000;
+            floorHight = 10;
+            var totalBricks = brickPerFloor * floorHight;
+            return totalBricks;
+        }
+        var resultBricks = brickCalculator(11);
+        console.log(resultBricks);
 
 
 
-
-
-
-
-
-
-
+        
 // tinyFriend start
 
 function tinyFriend(names){
