@@ -4,8 +4,8 @@ function feetToMile(feet){
     var mile = feet / 5280;
     return mile;
 }
-var mileResult = feetToMile(10560);
-console.log(mileResult);
+// var mileResult = feetToMile(10560);
+// console.log(mileResult);
 
 // feetToMile end
 
@@ -19,37 +19,37 @@ function woodCalculator(chair, table, bed){
     var totalWood = chairCount + tableCount + bedCount;
     return totalWood;
 }
-var woodResult = woodCalculator(6, 3, 2);
-console.log(woodResult);
+// var woodResult = woodCalculator(6, 3, 2);
+// console.log(woodResult);
 
 // woodCalculator end
 
 
 // brickCalculator start
 
-function brickCalculator(floor)
-    if(floor <= 10){
-            brickPerFloor = 1000;
-            floorHight = 15;
-            var totalBricks = brickPerFloor * floorHight;
-            return totalBricks;
-        }
-    else if(floor > 10 && floor <=20){
-            brickPerFloor = 1000;
-            floorHight = 12;
-            var totalBricks = brickPerFloor * floorHight;
-            return totalBricks;
-        }
-    else(floor > 20){
-            brickPerFloor = 1000;
-            floorHight = 10;
-            var totalBricks = brickPerFloor * floorHight;
-            return totalBricks;
-        }
-        var resultBricks = brickCalculator(11);
-        console.log(resultBricks);
+function brickCalculator(floor){
+    const  brickPerFeet = 1000;
+    var firstTenFloor = 10;
+    var secondTenFloor = 10;
+    
+    if(floor > 20){
+        var tweentyPlusFloor = floor - 20;
+        var totalBricks = (tweentyPlusFloor * 10 * 1000) + (firstTenFloor * 15 * 1000) + (secondTenFloor * 12 * 1000);
+        return totalBricks;
+    }
+    else if(floor > 10 && floor <= 20){
+        var tenTotweentyFloor = floor - secondTenFloor;
+        var totalBricks = (firstTenFloor * 15 * 1000) + (tenTotweentyFloor * 12 * 1000);
+        return totalBricks;
+    }
+    else{
+        floorHight = 15;
+        var totalBricks = brickPerFeet * floorHight * floor;
+        return totalBricks;
+    }
+}
 
-
+// brickCalculator end
 
         
 // tinyFriend start
